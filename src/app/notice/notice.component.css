@@ -1,0 +1,22 @@
+h4{
+    display: inline-block;
+}
+button{
+    display: inline-block;
+}
+.btn-danger{
+    color: #fafafa;
+}
+.table{
+    margin-top: 20px;
+    width: 1000px;
+}
+#del{
+    color: #fafafa;
+}
+.action a{
+    margin-right: 5px;
+}
+p{
+    text-align: center;
+}

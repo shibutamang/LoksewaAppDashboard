@@ -1,0 +1,24 @@
+.container{
+    background-color: #fafafa;
+    color: rgb(75, 74, 74);
+    padding-top: 20px;
+    height: 600px;
+}
+
+.table{
+   max-width: 950px;
+}
+h4 {
+    display: inline-block;
+}
+button{
+    display: inline-block;
+    margin-left: 750px;
+    margin-bottom: 10px;
+    background-color: #006868;
+    color: #fafafa;
+}
+button:hover{
+    background-color: #014242;
+    color: #fafafa;
+}

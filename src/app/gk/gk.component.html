@@ -1,0 +1,33 @@
+<div class="box-container">
+  <h4>Categories</h4>
+  <form (ngSubmit)="add()" *ngIf="!isUpdate">
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="data.category" id="cat" name="category" required/>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i> Add</button>
+    </div>
+  </form>
+  <form (ngSubmit)="update()" *ngIf="isUpdate">
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="data.category" id="cat" name="category" required/>
+      </div>
+      <div class="form-group">
+    <button type="submit" class="btn btn-success"><i class="fa fa-pencil"></i> Update</button> 
+    <button (click)="cancel()" class="btn btn-info" style="margin-left: 5px">x Cancel</button>
+      </div>
+  </form>
+   <table class="table table-striped">
+    <tr>
+      <th>S.N</th>
+      <th>Category Name</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of items | async">
+      <td>1.</td>
+      <td>{{item.category}}</td>
+      <td class="action"><a (click)="edit(item)" class="btn btn-info btn-sm" title="Update"><i class="fa fa-edit"></i></a><a (click)="deleteCat(item)" class="btn btn-danger btn-sm" title="Delete"><i class="fa fa-trash"></i></a></td>
+    </tr>
+  </table>
+  <p *ngIf="isLoading">Loading...</p>
+</div>

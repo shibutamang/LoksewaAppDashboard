@@ -1,0 +1,11 @@
+.box-container{
+    margin: 0;
+    padding: 15px;
+    height: 600px;
+    background-color: #fafafa;
+    color: rgb(46, 46, 46);
+}
+.form-group{
+    display: inline-block;
+    padding: 5px;
+}

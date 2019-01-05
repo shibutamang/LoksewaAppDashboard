@@ -1,0 +1,19 @@
+<!-- ============================================================== -->
+<!-- toggle and nav items -->
+<!-- ============================================================== -->
+<ul class="navbar-nav mr-auto float-left">                
+    <li (click)="toggleSidebar.emit()" class="nav-item m-l-10 d-block d-lg-none"> <a class="nav-link sidebartoggler text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+</ul>
+<!-- ============================================================== -->
+<!-- User profile and search -->
+<!-- ============================================================== -->
+<ul class="navbar-nav my-lg-0 float-right">
+    
+    
+    <!-- ============================================================== -->
+    <!-- Profile -->
+    <!-- ============================================================== -->
+    <li class="nav-item dropdown" ngbDropdown placement="bottom-right">
+      <button (click)="logOut()" class="btn btn-block btn-success">Log Out <i class ="fa fa-lock"></i></button>
+    </li>
+</ul>

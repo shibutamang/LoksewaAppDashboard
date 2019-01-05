@@ -1,0 +1,24 @@
+<div class="row">
+<div class="card">
+  <div class="card-body">
+          <h4>All the Notices</h4> <button routerLink="/notice/insert" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add</button>
+          <table class="table table-striped">
+            <tr>
+              <th>S.N</th>
+              <th>Title</th>
+              <th>Published On</th>
+              <th>Download URL</th>
+              <th>Action</th>
+            </tr>
+            <tr *ngFor="let item of items | async">
+              <td>1.</td>
+              <td>{{item.title}}</td>
+              <td>{{item.pub_date}}</td>
+              <td><a href="{{item.file_url}}"><i class="fa fa-download"></i></a></td>
+              <td class="action"><a routerLink="/notice/detail/{{item.id}}" class="btn btn-info btn-sm" title="Details"><i class="fa fa-bars"></i></a><a routerLink="/notice/update/{{item.id}}" class="btn btn-primary btn-sm" title="Update"><i class="fa fa-pencil"></i></a><a (click)="deleteNotice(item)" id="del" class="btn btn-danger btn-sm" title="Delete"><i class="fa fa-trash"></i></a></td>
+            </tr>
+          </table>
+          <p *ngIf="isLoading">Loading...</p>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <h4>Update News</h4>
+    <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
+     <div class="form-group">
+       <label>Heading:</label>
+       <input type="text" class="form-control" [(ngModel)]="data.heading" name="heading" required/>
+     </div>
+     <div class="form-group">
+         <label>Content:</label>
+         <textarea class="form-control" rows="7" cols="50" [(ngModel)]="data.content" name="data.content" ngModel required></textarea>
+     </div>
+     <div class="form-group">
+         <label>Publish Date:</label>
+       <input type="date" class="form-control" [(ngModel)]="data.pub_date" name="data.pub_date" ngModel required/>
+     </div>
+     <div class="form-group">
+         <label>Image URL:</label>
+         <input type="text" class="form-control" [(ngModel)]="data.img_url" name="data.img_url" ngModel required/>
+       </div>
+     <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+ </div>
+ 

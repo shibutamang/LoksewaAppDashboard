@@ -1,0 +1,29 @@
+.row{
+    font-size: 14px;
+}
+ul.nav, li{
+    border-radius: 0;
+}
+.table{
+    margin-top: 10px;
+}
+.tr-date{
+    width: 200px;
+}
+img{
+    height: 60px;
+    width: 80px;
+}
+button{
+    display: inline-block;
+    margin-left: 750px;
+}
+#del{
+    color: #fafafa;
+}
+.action a{
+    margin-right: 5px;
+}
+p{
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+.aside{
+    max-width: 250px;
+    height: 1000px;
+    background-color: black;
+}
+ul.nav, li{
+    border-radius: 0;
+}
+.main{
+   
+}
+.box{
+    height: 600px;
+    padding-bottom: 50px;
+    background-color: #fafafa;
+    padding-top: 20px;
+}
+.card{
+    width: 200px;
+    height: 120px;
+    padding: 10px;
+    color: #fafafa;
+    text-align: center;
+    border-radius: 4px;
+}
+.card1{
+    background-color: rgb(224, 9, 9);
+}
+.card2{
+    background-color: rgb(160, 189, 0);
+}
+.card3{
+    background-color: rgb(8, 58, 151);
+}
+.card h4{
+    margin-top: 30px;
+}

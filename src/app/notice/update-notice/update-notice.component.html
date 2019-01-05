@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>Update Notice</h4>
+  <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" class="form-control"  [(ngModel)]="data.title" name="title" required/>
+      </div>
+      <div class="form-group">
+          <label>Content:</label>
+          <textarea class="form-control" rows="7" cols="50"  [(ngModel)]="data.body" name="body" required></textarea>
+      </div>
+      <div class="form-group">
+          <label>Publish Date:</label>
+        <input type="date" class="form-control"  [(ngModel)]="data.pub_date" name="pub_date" required/>
+      </div>
+      <div class="form-group">
+          <label>Download URL:</label>
+          <input type="text" class="form-control"  [(ngModel)]="data.file_url" name="file_url" required/>
+        </div>
+      <button type="submit" class="btn btn-info">Update</button>
+     </form>
+</div>

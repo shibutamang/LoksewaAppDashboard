@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-body">
+            <div class="row">
+                    <div class="col-md-7">
+                        <h4>News Heading:</h4>
+                        <div>{{(items | async)?.heading}}</div>
+                        <h4>Content:</h4>
+                        <div>{{(items | async)?.content}}</div><br>
+                        <label>Published On: {{(items | async)?.pub_date}}</label>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="{{(items | async)?.img_url}}" height="200" width="220"/>
+                    </div>
+                </div>
+    </div>
+</div>
+ 

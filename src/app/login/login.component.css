@@ -1,0 +1,18 @@
+.panel{
+    max-width: 450px;
+    margin-left: 36%;
+    margin-top: 150px;
+}
+.btn{
+    width: 420px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px; 
+    color: #fafafa;
+    background-color: #006868;
+    border: none;
+}
+.btn:hover{
+    color: #fafafa;
+    background-color: #015555;
+}

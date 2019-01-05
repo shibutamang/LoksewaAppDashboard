@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+      <div class="row">
+          <form (ngSubmit)="onSubmit()">
+           <div class="form-group">
+             <label>Heading:</label>
+             <input type="text" class="form-control"  [(ngModel)]="data.heading" name="heading" required/>
+           </div>
+           <div class="form-group">
+               <label>Content:</label>
+               <textarea class="form-control" rows="7" cols="50"  [(ngModel)]="data.content" name="content" required></textarea>
+           </div>
+           <div class="form-group">
+               <label>Publish Date:</label>
+             <!-- <input type="date" class="form-control"  [(ngModel)]="data.pub_date" name="pub_date" required/> -->
+             <input [(ngModel)]="data.pub_date" name="pub_date" [owlDateTime]="dt2" placeholder="Date Time">
+             <span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar"></i></span>
+             <owl-date-time #dt2 pickerType="calendar"></owl-date-time>
+           </div>
+           <div class="form-group">
+               <label>Image URL:</label>
+               <input type="text" class="form-control"  [(ngModel)]="data.img_url" name="img_url" required/>
+             </div>
+           <button type="submit" class="btn btn-info">Add News</button>
+          </form>
+       </div>
+       
+  </div>
+</div>

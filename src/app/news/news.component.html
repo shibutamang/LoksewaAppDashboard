@@ -1,0 +1,26 @@
+<div class="row">
+<div class="card">
+  <div class="card-body">
+      <h4 style="display: inline-block">All the News</h4><button routerLink="/news/insert" class="btn btn-success"><i class="fa fa-plus"></i> Add</button>
+    <table class="table table-striped">
+        <tr>
+          <th>S.N</th>
+          <th>Heading</th>
+          <th class="tr-date">Publised Date</th>
+          <th>Image</th>
+          <th>Action</th>
+        </tr>
+    
+        <tr *ngFor="let item of items | async | paginate: { itemsPerPage: 4, currentPage: p }">
+          <td>1.</td>
+          <td>{{item.heading}}</td>
+          <td>{{item.pub_date}}</td>
+          <td> <img src="{{item.img_url}}" /></td>
+          <td class="action"><a routerLink="/news/detail/{{item.id}}" class="btn btn-info btn-sm" title="Details"><i class="fa fa-bars"></i> </a> <a routerLink="/news/edit/{{item.id}}" class="btn btn-primary btn-sm" title="Update"><i class="fa fa-pencil"></i></a> <a class="btn btn-danger btn-sm" id="del" (click)="deleteNews($event, item)" title="Delete"><i class="fa fa-trash"></i></a></td>
+        </tr>
+    </table>
+</div>
+<p *ngIf="isLoading">Loading...</p>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>
